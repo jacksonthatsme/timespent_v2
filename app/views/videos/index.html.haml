@@ -1,0 +1,18 @@
+%h1
+	Videos Index Page
+
+= link_to "New Video", new_video_path
+
+%div
+	- @videos.each do |video|
+		%h1
+			= video.artist
+		%h3
+			= video.location
+		%p
+			= video.description
+		- if video.photo
+			= image_tag video.photo.url
+		= link_to "Edit Video", edit_video_path(video)
+		= link_to 'Delete', video_path(video),
+                    method: :delete

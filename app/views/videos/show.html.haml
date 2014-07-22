@@ -1,0 +1,9 @@
+%h1
+	= @video.artist
+%h3
+	= @video.location
+%p
+	= @video.description
+
+= image_tag @video.photo.url
+= videojs_rails sources: { mp4: @video.video.url, setup: "{}", controls: false }, width:"400"
