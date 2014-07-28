@@ -1,0 +1,20 @@
+%h1 Time Spent
+
+%h3 Videos
+
+= link_to 'Videos', controller: 'videos'
+= link_to 'Blog', controller: 'posts'
+
+%div
+	- @videos.each do |video|
+		%h1
+			= video.artist
+		%h3
+			= video.location
+		%p
+			= video.description
+		- if video.photo
+			= image_tag video.photo.url
+		= link_to "Edit Video", edit_video_path(video)
+		= link_to 'Delete', video_path(video), method: :delete
+		= link_to 'Show', video_path(video)

@@ -20,6 +20,7 @@ gem "haml-rails"
 # Use paperclip for image and video uploads
 gem "paperclip", "~> 4.1"
 
+
 # Use Video Js Gem to handle 
 gem 'videojs_rails'
 
