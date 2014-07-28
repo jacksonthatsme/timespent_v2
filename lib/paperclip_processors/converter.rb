@@ -1,17 +1,18 @@
 module Paperclip
-	class Converter < Processor
+  class Converter < Processor
 
-		attr_accessor :video, :photo
+    attr_accessor :video, :photo
 
-		def initialize(file, options = {},attachment = nil)
-		  super
-		  @file = file
-		end
+    def initialize(file, options = {},attachment = nil)
+      super
+      @file = file
+      @basename = File.basename(@file.path, File.extname(@file.path))
+    end
 
-		def make
-			Voyeur::Media.new( filename: @file ).convert_to_html5
-			@file
-		end
+    def make
+      Voyeur::Media.new( filename: @file ).convert_to_html5
+      @file
+    end
 
-	end
+  end
 end
