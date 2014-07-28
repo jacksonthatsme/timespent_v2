@@ -11,8 +11,6 @@
 			= video.location
 		%p
 			= video.description
-		- if video.photo
-			= image_tag video.photo.url
 		= link_to "Edit Video", edit_video_path(video)
 		= link_to 'Delete', video_path(video), method: :delete
 		= link_to 'Show', video_path(video)

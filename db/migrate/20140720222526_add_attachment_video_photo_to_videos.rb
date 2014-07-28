@@ -1,13 +1,8 @@
 class AddAttachmentVideoPhotoToVideos < ActiveRecord::Migration
-  def self.up
+  def change
     change_table :videos do |t|
-      t.attachment :video
-      t.attachment :photo
+      t.string :video
     end
   end
 
-  def self.down
-    remove_attachment :videos, :video
-    remove_attachment :videos, :photo
-  end
 end

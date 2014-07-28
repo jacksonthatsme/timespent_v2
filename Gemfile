@@ -20,6 +20,9 @@ gem "haml-rails"
 # Use paperclip for image and video uploads
 gem "paperclip", "~> 4.1"
 
+# Use carrierwave and mini magick for image and video uploads
+gem 'carrierwave', "~> 0.10.0"
+gem 'mini_magick', "~> 3.7.0"
 
 # Use Video Js Gem to handle 
 gem 'videojs_rails'

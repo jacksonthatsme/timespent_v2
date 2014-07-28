@@ -5,6 +5,4 @@
 %p
 	= @video.description
 
-= image_tag @video.photo.url
 = videojs_rails sources: { mp4: @video.video.url, webm: @video.video.url, setup: "{}", controls: false }, width:"400"
-= @video.video.url
