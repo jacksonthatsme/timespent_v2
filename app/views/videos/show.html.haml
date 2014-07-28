@@ -5,4 +5,4 @@
 %p
 	= @video.description
 
-= videojs_rails sources: { mp4: @video.video.url, webm: @video.video.url, setup: "{}", controls: false }, width:"400"
+= videojs_rails sources: { mp4: @video.video.url, webm: @video.video.webm.url, setup: "{}", controls: false }, width:"400"
