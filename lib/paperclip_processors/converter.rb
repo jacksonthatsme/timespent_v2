@@ -1,3 +1,5 @@
+require 'voyeur'
+
 module Paperclip
   class Converter < Processor
 
