@@ -28,7 +28,7 @@ gem 'mini_magick', "~> 3.7.0"
 gem 'videojs_rails'
 
 # Use Voyeur to convert videos
-gem 'voyeur'
+gem 'voyeur', :git => 'git://github.com/devthenet/voyeur'
 
 # Use Redcarpet for markdown support
 gem 'redcarpet'
